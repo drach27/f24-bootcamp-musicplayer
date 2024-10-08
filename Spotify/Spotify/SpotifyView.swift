@@ -9,7 +9,28 @@ import SwiftUI
 
 struct SpotifyView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack{
+            LinearGradient(gradient: Gradient(colors: [.blue, .gray]), startPoint: .top, endPoint: .bottom)
+            VStack{
+                HStack{
+                    Image(systemName: "chevron.down")
+                        .foregroundColor(.white)
+                    Spacer()
+                    Text("Road Trip Vibes")
+                        .font(.body)
+                        .foregroundColor(.white)
+                    Spacer()
+                    Image(systemName: "ellipsis")
+                        .foregroundColor(.white)
+                }
+                .padding()
+                Image("8Teen")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+            }
+        }
+        .edgesIgnoringSafeArea(.all)
     }
 }
 
